@@ -1,3 +1,22 @@
+import {
+  javascript,
+  typescript,
+  html,
+  css,
+  reactjs,
+  redux,
+  tailwind,
+  nodejs,
+  mongodb,
+  git,
+  figma,
+  docker,
+  threejs,
+  mysql,
+  house_of_fashion,
+  best,
+} from "../assets";
+
 export const navLinks = [
   {
     id: "about",
@@ -13,7 +32,7 @@ export const navLinks = [
   },
 ];
 
-const technologies = [
+export const technologies = [
   {
     name: "HTML 5",
     icon: html,
@@ -50,49 +69,48 @@ const technologies = [
     name: "MongoDB",
     icon: mongodb,
   },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
+
   {
     name: "git",
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
+    name: "MySQL",
+    icon: mysql,
   },
 ];
 
-const projects = [
+export const projects = [
   {
-    name: "Car Rent",
+    name: "House Of Fashion",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Ecommerce web application that allows users to find their needs from one place.Buyers can see a catalog of products,filter them and add to the cart.",
     tags: [
       {
         name: "react",
-        color: "blue-text-gradient",
+        color: "text-blue-300",
       },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
+
       {
         name: "tailwind",
-        color: "pink-text-gradient",
+        color: "text-pink-300",
+      },
+
+      {
+        name: "redux-toolkit",
+        color: "text-yellow-300",
+      },
+      {
+        name: "material_tailwind",
+        color: "text-purple-300",
       },
     ],
-    image: carrent,
+    image: house_of_fashion,
     source_code_link:
       "https://github.com/Studawatta/Basic_Student_Management.git",
   },
   {
-    name: "Job IT",
+    name: "BEST",
     description:
       "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
     tags: [
@@ -109,7 +127,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: best,
     source_code_link: "https://github.com/",
   },
   {
@@ -130,9 +148,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    // image: best,
     source_code_link: "https://github.com/",
   },
 ];
-
-export { services, technologies, experiences, testimonials, projects };

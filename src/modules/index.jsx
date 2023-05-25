@@ -1,5 +1,6 @@
 import Landing from "./Landing";
 import Contact from "./Contact";
-import Projects from "./Projects";
+import Work from "./Work";
+import About from "./About";
 
-export { Landing, Contact, Projects };
+export { Landing, Contact, Work, About };

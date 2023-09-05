@@ -23,13 +23,13 @@ const Landing = ({ darkTheme, setDarkTheme }) => {
             </h1>
             <p className={`${styles.heroSubText} mt-2`}>
               Design minded fullstack developer <br />
-              <span className="text-[24px]">
+              {/* <span className="text-[24px]">
                 Wanna see more? Just check my{" "}
                 <a className="cursor-pointer text-[#352060] underline dark:text-[#915eff] ">
                   resume
                 </a>
                 .
-              </span>
+              </span> */}
             </p>
           </div>
         </div>

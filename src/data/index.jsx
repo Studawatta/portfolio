@@ -26,7 +26,15 @@ import {
 } from "../assets/images/house_of_fashion";
 import { b01, b02, b03, b04 } from "../assets/images/best";
 import { e01, e02, e03, e04, e05, e06 } from "../assets/images/evogym";
-
+import {
+  slr01,
+  slr02,
+  slr03,
+  slr04,
+  slr05,
+  slr06,
+  slr07,
+} from "../assets/images/sl_railways";
 export const navLinks = [
   {
     id: "about",
@@ -94,8 +102,12 @@ export const projects = [
   {
     name: "House Of Fashion",
     description:
-      "Ecommerce web application that allows users to find their needs from one place.Buyers can see a catalog of products,filter them and add to the cart.",
+      "Ecommerce web application front-end that allows users to find their needs from one place.Buyers can see a catalog of products,filter them and add to the cart.",
     tags: [
+      {
+        name: "javaScript",
+        color: "text-[#666633]",
+      },
       {
         name: "react",
         color: "text-blue-300",
@@ -122,19 +134,39 @@ export const projects = [
   {
     name: "BEST",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Full-Stack web application that enables users to manage their school's students records",
     tags: [
       {
+        name: "javaScript",
+        color: "text-[#666633]",
+      },
+      {
         name: "react",
-        color: "blue-text-gradient",
+        color: "text-blue-300",
       },
       {
-        name: "restapi",
-        color: "green-text-gradient",
+        name: "tailwind",
+        color: "text-pink-300",
       },
       {
-        name: "scss",
-        color: "pink-text-gradient",
+        name: "redux-toolkit",
+        color: "text-yellow-300",
+      },
+      {
+        name: "styled-components",
+        color: "text-green-800",
+      },
+      {
+        name: "mongoDB",
+        color: "text-blue-800",
+      },
+      {
+        name: "Express",
+        color: "text-red-600",
+      },
+      {
+        name: "Node",
+        color: "text-purple-900",
       },
     ],
     images: [b01, b02, b03, b04],
@@ -142,20 +174,24 @@ export const projects = [
   },
   {
     name: "EVOGYM",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    description: "Web application front-end for gymnasium",
     tags: [
       {
-        name: "nextjs",
-        color: "blue-text-gradient",
+        name: "typeScript",
+        color: "text-white",
       },
       {
-        name: "supabase",
-        color: "green-text-gradient",
+        name: "react",
+        color: "text-blue-300",
+      },
+
+      {
+        name: "tailwind",
+        color: "text-pink-300",
       },
       {
-        name: "css",
-        color: "pink-text-gradient",
+        name: "framer-motion",
+        color: "text-[#804000]",
       },
     ],
     images: [e01, e02, e03, e04, e05, e06],
@@ -163,23 +199,44 @@ export const projects = [
   },
   {
     name: "Dialog clone",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    description: "Clone of Dialog Axiata web-site",
     tags: [
       {
-        name: "nextjs",
-        color: "blue-text-gradient",
+        name: "javaScript",
+        color: "text-[#666633]",
       },
       {
-        name: "supabase",
-        color: "green-text-gradient",
+        name: "react",
+        color: "text-blue-300",
       },
+
       {
-        name: "css",
-        color: "pink-text-gradient",
+        name: "sass",
+        color: "text-[#993333]",
       },
     ],
     images: [d01, d02, d03, d04, d05, d06],
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Sri Lanka Railways",
+    description: "Clone of Sri Lanka Railways ticket booking site",
+    tags: [
+      {
+        name: "javaScript",
+        color: "text-[#666633]",
+      },
+      {
+        name: "react",
+        color: "text-blue-300",
+      },
+
+      {
+        name: "tailwind",
+        color: "text-pink-300",
+      },
+    ],
+    images: [slr01, slr02, slr03, slr04, slr05, slr06, slr07],
     source_code_link: "https://github.com/",
   },
 ];

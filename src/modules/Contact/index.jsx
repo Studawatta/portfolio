@@ -6,7 +6,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { styles } from "../../styles";
 // import { slideIn } from '../utils/motion';
 
-const Contact = () => {
+const Contact = ({ darkTheme }) => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -89,47 +89,44 @@ const Contact = () => {
           className="flex w-[50%] flex-col gap-2 py-6"
         >
           <label className="flex flex-col">
-            <span className="mb-4 font-medium text-white">Your Name</span>
+            <span className={styles.formLableText}>Your Name</span>
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
               placeholder="What's your name?"
-              className="rounded-lg border-none
-              bg-tertiary px-6 py-4 font-medium text-white outline-none placeholder:text-secondary"
+              className={styles.formInputStyle}
             />
           </label>
 
           <label className="flex flex-col">
-            <span className="mb-4 font-medium text-white">Your Email</span>
+            <span className={styles.formLableText}>Your Email</span>
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
               placeholder="What's your email?"
-              className="rounded-lg border-none
-              bg-tertiary px-6 py-4 font-medium text-white outline-none placeholder:text-secondary"
+              className={styles.formInputStyle}
             />
           </label>
 
           <label className="flex flex-col">
-            <span className="mb-4 font-medium text-white">Your Message</span>
+            <span className={styles.formLableText}>Your Message</span>
             <textarea
               rows="7"
               name="message"
               value={form.message}
               onChange={handleChange}
               placeholder="What do you want to say?"
-              className="rounded-lg border-none
-              bg-tertiary px-6 py-4 font-medium text-white outline-none placeholder:text-secondary"
+              className={styles.formInputStyle}
             />
           </label>
 
           <button
             type="submit"
-            className="w-fit rounded-xl bg-tertiary px-8 py-3 font-bold text-white shadow-md shadow-primary outline-none hover:bg-tertiary/80"
+            className="w-fit rounded-xl bg-slate-500 px-8 py-3 font-bold text-white shadow-md shadow-primary outline-none hover:bg-tertiary/80 dark:bg-tertiary"
           >
             {loading ? "Sending..." : "Send"}
           </button>
@@ -143,7 +140,7 @@ const Contact = () => {
             hidden: { opacity: 0, x: 50 },
             visible: { opacity: 1, x: 0 },
           }}
-          className="flex w-[35%] flex-col gap-4   text-white"
+          className="flex w-[35%] flex-col gap-4   dark:text-white"
         >
           <span className=" font-poppings text-[28px] font-semibold">
             Sandun Thisara
@@ -161,20 +158,20 @@ const Contact = () => {
           </a>
           <div>
             <span className="text-[24px]">See me on</span>
-            <div className="ml-4 mt-4 flex gap-6 text-[32px] text-white">
+            <div className="ml-4 mt-4 flex gap-6 text-[32px] dark:text-white">
               <a
                 href="http://www.linkedin.com/in/sandunthisara"
                 target="_blank"
                 className="ml-[5px] font-[500] text-black no-underline"
               >
-                <FaLinkedin color="white" />
+                <FaLinkedin color={darkTheme ? "white" : "black"} />
               </a>
               <a
                 href="https://github.com/Studawatta"
                 target="_blank"
                 className="ml-[5px] font-[500] text-black no-underline"
               >
-                <AiFillGithub color="white" />
+                <AiFillGithub color={darkTheme ? "white" : "black"} />
               </a>
             </div>
           </div>

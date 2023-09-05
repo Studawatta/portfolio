@@ -12,13 +12,13 @@ const Footer = () => {
       </div>
       {/* MIDDLE  */}
       <div>
-        <span className="font-poppings text-lg text-white">
+        <span className="font-poppings text-lg dark:text-white">
           Copyright © 2022 Sandun Thisara.
         </span>
       </div>
       {/* RIGHT */}
       <AnchorLink href="#home">
-        <div className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white text-[28px] text-blue-600 hover:animate-bounce">
+        <div className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-slate-500 text-[28px] text-white hover:animate-bounce dark:bg-white dark:text-blue-600">
           <HiOutlineArrowNarrowUp />
         </div>
       </AnchorLink>

@@ -18,8 +18,10 @@ import BallCanvas from "./canvas/Ball";
 import logo from "./images/logo.png";
 import whiteLogo from "./images/whiteLogo.png";
 import github from "./images/github.png";
-import house_of_fashion from "./images/house_of_fashion.png";
-import best from "./images/best.png";
+// import house_of_fashion from "./images/house_of_fashion.png";
+// import best from "./images/best.png";
+// import evogym from "./images/evogym.png";
+// import dialogClone from "./images/dialogClone.png";
 
 export {
   docker,
@@ -40,6 +42,8 @@ export {
   logo,
   whiteLogo,
   github,
-  house_of_fashion,
-  best,
+  // house_of_fashion,
+  // best,
+  // evogym,
+  // dialogClone,
 };

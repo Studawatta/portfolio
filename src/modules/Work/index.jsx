@@ -3,6 +3,8 @@ import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { github } from "../../assets";
 import { projects } from "../../data";
+import { useState } from "react";
+import { ImageSlider } from "../../components";
 
 const ProjectCard = ({
   index,
@@ -11,6 +13,9 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  viewImg,
+  setIndex,
+  darkTheme,
 }) => {
   return (
     <motion.div
@@ -29,15 +34,19 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="w-full rounded-2xl bg-tertiary p-5 sm:w-[360px]"
+        className="w-full rounded-2xl bg-gray-500 p-5 dark:bg-tertiary sm:w-[360px]"
       >
-        <div className="relative h-[230px] w-full">
+        <div className="relative my-5 h-[160px] w-full ">
           <img
             src={image}
             alt={name}
-            className="h-full w-full rounded-2xl object-contain"
+            className="h-full w-full cursor-pointer   object-contain"
+            onClick={() => {
+              viewImg(true);
+              setIndex(index);
+            }}
           />
-          <div className="card-img_hover absolute inset-0 m-3 flex justify-end">
+          <div className="m-3 flex h-fit justify-end ">
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className="black-gradient flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-black"
@@ -51,8 +60,8 @@ const ProjectCard = ({
           </div>
         </div>
         <div className="mt-5">
-          <h3 className="text-[24px] font-bold text-white">{name}</h3>
-          <p className="mt-2 text-[14px] text-secondary">{description}</p>
+          <h3 className="text-[24px] font-bold dark:text-white">{name}</h3>
+          <p className="mt-2 text-[14px] dark:text-secondary">{description}</p>
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
@@ -66,9 +75,11 @@ const ProjectCard = ({
   );
 };
 
-const Work = () => {
+const Work = ({ darkTheme }) => {
+  const [viewImg, setViewImg] = useState(false);
+  const [proIndex, setProIndex] = useState(0);
   return (
-    <div id="work" className="mt-24  py-20">
+    <div id="work" className="  py-20">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -92,7 +103,7 @@ const Work = () => {
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
           }}
-          className="mt-3 max-w-3xl text-[17px] leading-[30px] text-secondary"
+          className="mt-3 max-w-3xl text-[17px] leading-[30px] dark:text-secondary"
         >
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with
@@ -101,11 +112,26 @@ const Work = () => {
           and manage projects effectively.
         </motion.p>
       </div>
-      <div className="mt-20 flex flex-wrap gap-7">
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
-      </div>
+      {viewImg ? (
+        <ImageSlider
+          viewImage={setViewImg}
+          // imges={projects[0].name}
+          index={proIndex}
+        />
+      ) : (
+        <div className="mt-20 flex flex-wrap gap-7">
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={`project-${index}`}
+              index={index}
+              image={project.images[0]}
+              {...project}
+              viewImg={setViewImg}
+              setIndex={setProIndex}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

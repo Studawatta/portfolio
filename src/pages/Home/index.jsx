@@ -1,15 +1,15 @@
 import { Footer, Navbar } from "../../components";
 import { Landing, About, Work, Contact } from "../../modules";
 import { styles } from "../../styles";
-const Home = () => {
+const Home = ({ darkTheme, setDarkTheme }) => {
   return (
     <div>
-      <Navbar />
+      <Navbar darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
       <div className={`${styles.paddingX} mx-auto max-w-7xl`}>
-        <Landing />
-        <About />
-        <Work />
-        <Contact />
+        <Landing darkTheme={darkTheme} />
+        <About darkTheme={darkTheme} />
+        <Work darkTheme={darkTheme} />
+        <Contact darkTheme={darkTheme} />
       </div>
       <Footer />
     </div>

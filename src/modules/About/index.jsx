@@ -3,7 +3,7 @@ import { styles } from "../../styles";
 import { technologies } from "../../data";
 import { BallCanvas } from "../../assets";
 
-const About = () => {
+const About = ({ darkTheme }) => {
   return (
     <div id="about" className=" flex h-fit flex-col justify-center py-20 ">
       <motion.div
@@ -28,7 +28,7 @@ const About = () => {
           hidden: { opacity: 0, x: -50 },
           visible: { opacity: 1, x: 0 },
         }}
-        className="mb-4 mt-4 max-w-3xl text-[17px] leading-[30px] text-secondary"
+        className="mb-4 mt-4 max-w-3xl text-[17px] leading-[30px] dark:text-secondary"
       >
         I'm a skilled software developer with experience in TypeScript and
         JavaScript, and framworks like React, Node js, Express js. I'm a quick

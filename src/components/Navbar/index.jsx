@@ -5,16 +5,16 @@ import useMediaQuary from "../../hooks/useMediaQuary";
 import { HiOutlineMenu, HiOutlineX, HiMoon } from "react-icons/hi";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
-const Navbar = () => {
+const Navbar = ({ darkTheme, setDarkTheme }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveMediumScreens = useMediaQuary("(min-width:768px");
   return (
     <>
-      <div className="fixed top-0 z-10 flex h-16 w-full items-center justify-between border-b-2 border-b-slate-400 bg-white/0 px-[8%]  backdrop-blur-[10px]">
+      <div className="fixed top-0 z-10 flex h-20 w-full items-center justify-between border-b-2 border-b-slate-400 bg-slate-500/50 px-[8%]  backdrop-blur-[10px] dark:bg-white/0">
         {/* NAV_LEFT */}
         <AnchorLink href="#home">
-          <div className="flex h-fit cursor-pointer items-center  gap-2 font-bold text-white">
-            <img src={logo} alt="logo" className="h-12 w-12" />
+          <div className="flex h-fit cursor-pointer items-center  gap-2 font-bold dark:text-white">
+            <img src={logo} alt="logo" className="h-14 w-14" />
             <span className=" font-poppings">Sandun Thisara</span>
           </div>
         </AnchorLink>
@@ -26,7 +26,7 @@ const Navbar = () => {
               {navLinks.map((link) => {
                 return (
                   <span
-                    className="cursor-pointer font-inter font-semibold text-secondary hover:text-white"
+                    className="cursor-pointe font-inter font-semibold text-primary  hover:text-slate-500 dark:text-secondary  dark:hover:text-white "
                     key={link.id}
                   >
                     <AnchorLink href={`#${link.id}`}>{link.title}</AnchorLink>
@@ -40,10 +40,12 @@ const Navbar = () => {
               className="text-[24px] text-white transition  duration-500"
             />
           )}
-          <span className="flex cursor-pointer items-center gap-1 text-white">
-            Dark
-            <HiMoon />
-          </span>
+          <button
+            onClick={() => setDarkTheme(!darkTheme)}
+            className="rounded-[25px] border  bg-black px-2 py-[2px] font-bold text-white dark:bg-white dark:text-black"
+          >
+            {darkTheme ? "Light 💡" : "Dark 🌙"}
+          </button>
         </div>
       </div>
       {/* MOBILE_MENU_MODEL */}

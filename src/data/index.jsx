@@ -13,9 +13,19 @@ import {
   docker,
   threejs,
   mysql,
-  house_of_fashion,
-  best,
 } from "../assets";
+
+import { d01, d02, d03, d04, d05, d06 } from "../assets/images/dialog";
+import {
+  h01,
+  h02,
+  h03,
+  h04,
+  h05,
+  h06,
+} from "../assets/images/house_of_fashion";
+import { b01, b02, b03, b04 } from "../assets/images/best";
+import { e01, e02, e03, e04, e05, e06 } from "../assets/images/evogym";
 
 export const navLinks = [
   {
@@ -105,7 +115,7 @@ export const projects = [
         color: "text-purple-300",
       },
     ],
-    image: house_of_fashion,
+    images: [h01, h02, h03, h04, h05, h06],
     source_code_link:
       "https://github.com/Studawatta/Basic_Student_Management.git",
   },
@@ -127,11 +137,11 @@ export const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: best,
+    images: [b01, b02, b03, b04],
     source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "EVOGYM",
     description:
       "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
     tags: [
@@ -148,7 +158,28 @@ export const projects = [
         color: "pink-text-gradient",
       },
     ],
-    // image: best,
+    images: [e01, e02, e03, e04, e05, e06],
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Dialog clone",
+    description:
+      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    images: [d01, d02, d03, d04, d05, d06],
     source_code_link: "https://github.com/",
   },
 ];

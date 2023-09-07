@@ -22,7 +22,7 @@ const ProjectCard = ({
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
-      transition={{ delay: index * 0.5, duration: 1 }}
+      transition={{ delay: index * 0.3, duration: 1 }}
       variants={{
         hidden: { opacity: 0, y: -100 },
         visible: { opacity: 1, y: 0 },

@@ -2,10 +2,14 @@ import { motion } from "framer-motion";
 import { styles } from "../../styles";
 import { technologies } from "../../data";
 import { BallCanvas } from "../../assets";
+import useMediaQuary from "../../hooks/useMediaQuary";
+import { h01 } from "../../assets/images/house_of_fashion";
 
 const About = ({ darkTheme }) => {
+  const isAboveMediumScreens = useMediaQuary("(min-width:768px");
+
   return (
-    <div id="about" className=" flex h-fit flex-col justify-center py-20 ">
+    <div id="about" className=" flex h-fit flex-col justify-center pt-20 ">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -50,24 +54,49 @@ const About = ({ darkTheme }) => {
         >
           Technologies
         </motion.h2>
-        <div className=" mt-8">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.5, duration: 1 }}
-            variants={{
-              hidden: { opacity: 0, x: -50 },
-              visible: { opacity: 1, x: 0 },
-            }}
-            className=" flex flex-row flex-wrap justify-center gap-10"
-          >
-            {technologies.map((technology) => (
-              <div className="h-28 w-28 " key={technology.name}>
-                <BallCanvas icon={technology.icon} />
-              </div>
-            ))}
-          </motion.div>
+        <div className=" mt-8 ">
+          {isAboveMediumScreens ? (
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.5, duration: 1 }}
+              variants={{
+                hidden: { opacity: 0, x: -50 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              className=" flex flex-row flex-wrap justify-center gap-10"
+            >
+              {technologies.map((technology) => (
+                <div className="h-28 w-28 " key={technology.name}>
+                  <BallCanvas icon={technology.icon} />
+                </div>
+              ))}
+            </motion.div>
+          ) : (
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: 0.5, duration: 1 }}
+              variants={{
+                hidden: { opacity: 0, x: -50 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              className=" flex flex-row flex-wrap justify-center gap-10"
+            >
+              {technologies.map((technology) => (
+                <div className="h-28 w-28 " key={technology.name}>
+                  {/* <h1 className="text-white">{technology.name}</h1> */}
+                  <img
+                    src={technology.icon}
+                    alt="technologyIcon"
+                    className="h-20 w-20"
+                  />
+                </div>
+              ))}
+            </motion.div>
+          )}
         </div>
       </div>
     </div>

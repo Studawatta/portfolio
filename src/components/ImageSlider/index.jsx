@@ -14,7 +14,7 @@ const ImageSlider = ({ viewImage, index }) => {
       >
         X
       </span>
-      <div className="m-auto mt-5 flex h-[500px] w-[60%] items-center justify-between">
+      <div className="m-auto mt-5 flex w-[100%] items-center justify-between md:h-[500px] md:w-[60%]">
         <span
           className=" cursor-pointer rounded-full bg-gray-600 p-2 text-white "
           onClick={() => {
@@ -25,7 +25,7 @@ const ImageSlider = ({ viewImage, index }) => {
         >
           <ArrowBackIosNewIcon className="" />
         </span>
-        <div className="flex h-full w-[90%] overflow-hidden  ">
+        <div className="flex h-full w-[90%] overflow-hidden ">
           <div
             className="flex transition-transform duration-[1000ms] ease-in-out"
             style={{ transform: `translateX(-${curr * 100}%)` }}
@@ -35,7 +35,7 @@ const ImageSlider = ({ viewImage, index }) => {
                 src={img}
                 key={index}
                 alt="Img"
-                className="h-full w-full object-contain"
+                className="h-[250px] w-full md:h-full md:object-contain"
               />
             ))}
           </div>

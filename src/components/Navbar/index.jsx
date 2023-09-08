@@ -33,19 +33,27 @@ const Navbar = ({ darkTheme, setDarkTheme }) => {
                   </span>
                 );
               })}
+              <button
+                onClick={() => setDarkTheme(!darkTheme)}
+                className="rounded-[25px] border  bg-black px-2 py-[2px] font-bold text-white dark:bg-white dark:text-black"
+              >
+                {darkTheme ? "Light 💡" : "Dark 🌙"}
+              </button>
             </div>
           ) : (
-            <HiOutlineMenu
-              onClick={() => setIsMenuToggled(!isMenuToggled)}
-              className="text-[24px] text-white transition  duration-500"
-            />
+            <div className="flex gap-8">
+              <button
+                onClick={() => setDarkTheme(!darkTheme)}
+                className="rounded-[25px] border  bg-black px-2 py-[2px] font-bold text-white dark:bg-white dark:text-black"
+              >
+                {darkTheme ? "Light 💡" : "Dark 🌙"}
+              </button>
+              <HiOutlineMenu
+                onClick={() => setIsMenuToggled(!isMenuToggled)}
+                className="text-[24px] text-white transition  duration-500"
+              />
+            </div>
           )}
-          <button
-            onClick={() => setDarkTheme(!darkTheme)}
-            className="rounded-[25px] border  bg-black px-2 py-[2px] font-bold text-white dark:bg-white dark:text-black"
-          >
-            {darkTheme ? "Light 💡" : "Dark 🌙"}
-          </button>
         </div>
       </div>
       {/* MOBILE_MENU_MODEL */}
@@ -64,12 +72,13 @@ const Navbar = ({ darkTheme, setDarkTheme }) => {
           <div className=" flex  flex-col items-center  gap-6 pb-4 pt-2">
             {navLinks.map((link) => {
               return (
-                <span
+                <AnchorLink
                   className="cursor-pointer font-inter font-semibold text-secondary hover:text-white"
                   key={link.id}
+                  href={`#${link.id}`}
                 >
                   {link.title}
-                </span>
+                </AnchorLink>
               );
             })}
           </div>

@@ -60,7 +60,7 @@ const Contact = ({ darkTheme }) => {
       );
   };
   return (
-    <div id="contact">
+    <div id="contact" className="py-20">
       <motion.div
         initial="hidden"
         whileInView="visible"

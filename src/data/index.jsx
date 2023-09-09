@@ -128,8 +128,7 @@ export const projects = [
       },
     ],
     images: [h01, h02, h03, h04, h05, h06],
-    source_code_link:
-      "https://github.com/Studawatta/Basic_Student_Management.git",
+    source_code_link: "https://github.com/Studawatta/House-Of-Wears.git",
   },
   {
     name: "BEST",
@@ -170,7 +169,7 @@ export const projects = [
       },
     ],
     images: [b01, b02, b03, b04],
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Studawatta/BEST.git",
   },
   {
     name: "EVOGYM",
@@ -195,7 +194,7 @@ export const projects = [
       },
     ],
     images: [e01, e02, e03, e04, e05, e06],
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Studawatta/evogym.git",
   },
   {
     name: "Dialog clone",
@@ -216,7 +215,7 @@ export const projects = [
       },
     ],
     images: [d01, d02, d03, d04, d05, d06],
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Studawatta/DialogAxiataClone.git",
   },
   {
     name: "Sri Lanka Railways",

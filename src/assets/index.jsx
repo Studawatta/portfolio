@@ -15,13 +15,15 @@ import mysql from "./icons/mysql.png";
 
 import BallCanvas from "./canvas/Ball";
 
-import logo from "./images/logo.png";
-import whiteLogo from "./images/whiteLogo.png";
-import github from "./images/github.png";
-// import house_of_fashion from "./images/house_of_fashion.png";
-// import best from "./images/best.png";
-// import evogym from "./images/evogym.png";
-// import dialogClone from "./images/dialogClone.png";
+import {
+  evogym,
+  github,
+  house_of_fashion,
+  logo,
+  pizzahut,
+  sl_railways,
+  whiteLogo,
+} from "./images";
 
 export {
   docker,
@@ -39,11 +41,11 @@ export {
   css,
   mysql,
   BallCanvas,
-  logo,
-  whiteLogo,
+  evogym,
   github,
-  // house_of_fashion,
-  // best,
-  // evogym,
-  // dialogClone,
+  house_of_fashion,
+  logo,
+  pizzahut,
+  sl_railways,
+  whiteLogo,
 };

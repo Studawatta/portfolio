@@ -13,28 +13,12 @@ import {
   docker,
   threejs,
   mysql,
+  evogym,
+  house_of_fashion,
+  pizzahut,
+  sl_railways,
 } from "../assets";
 
-import { d01, d02, d03, d04, d05, d06 } from "../assets/images/dialog";
-import {
-  h01,
-  h02,
-  h03,
-  h04,
-  h05,
-  h06,
-} from "../assets/images/house_of_fashion";
-import { b01, b02, b03, b04 } from "../assets/images/best";
-import { e01, e02, e03, e04, e05, e06 } from "../assets/images/evogym";
-import {
-  slr01,
-  slr02,
-  slr03,
-  slr04,
-  slr05,
-  slr06,
-  slr07,
-} from "../assets/images/sl_railways";
 export const navLinks = [
   {
     id: "about",
@@ -127,50 +111,11 @@ export const projects = [
         color: "text-purple-300",
       },
     ],
-    images: [h01, h02, h03, h04, h05, h06],
+    image: house_of_fashion,
     source_code_link: "https://github.com/Studawatta/House-Of-Wears.git",
+    link: "https://pizza-hut-clone-gamma.vercel.app/",
   },
-  {
-    name: "BEST",
-    description:
-      "Full-Stack web application that enables users to manage their school's students records",
-    tags: [
-      {
-        name: "javaScript",
-        color: "text-[#666633]",
-      },
-      {
-        name: "react",
-        color: "text-blue-300",
-      },
-      {
-        name: "tailwind",
-        color: "text-pink-300",
-      },
-      {
-        name: "redux-toolkit",
-        color: "text-yellow-300",
-      },
-      {
-        name: "styled-components",
-        color: "text-green-800",
-      },
-      {
-        name: "mongoDB",
-        color: "text-blue-800",
-      },
-      {
-        name: "Express",
-        color: "text-red-600",
-      },
-      {
-        name: "Node",
-        color: "text-purple-900",
-      },
-    ],
-    images: [b01, b02, b03, b04],
-    source_code_link: "https://github.com/Studawatta/BEST.git",
-  },
+
   {
     name: "EVOGYM",
     description: "Web application front-end for gymnasium",
@@ -193,12 +138,13 @@ export const projects = [
         color: "text-[#804000]",
       },
     ],
-    images: [e01, e02, e03, e04, e05, e06],
+    image: evogym,
     source_code_link: "https://github.com/Studawatta/evogym.git",
+    link: "https://evogym.vercel.app/",
   },
   {
-    name: "Dialog clone",
-    description: "Clone of Dialog Axiata web-site",
+    name: "Pizza Hut",
+    description: "Online pizza delivery application front-end for Pizza Hut",
     tags: [
       {
         name: "javaScript",
@@ -208,15 +154,21 @@ export const projects = [
         name: "react",
         color: "text-blue-300",
       },
+      {
+        name: "redux-toolkit",
+        color: "text-yellow-300",
+      },
 
       {
-        name: "sass",
-        color: "text-[#993333]",
+        name: "tailwind",
+        color: "text-pink-300",
       },
     ],
-    images: [d01, d02, d03, d04, d05, d06],
-    source_code_link: "https://github.com/Studawatta/DialogAxiataClone.git",
+    image: pizzahut,
+    source_code_link: "https://github.com/Studawatta/PizzaHut-clone.git",
+    link: "https://pizza-hut-clone-gamma.vercel.app/",
   },
+
   {
     name: "Sri Lanka Railways",
     description: "Clone of Sri Lanka Railways ticket booking site",
@@ -235,7 +187,7 @@ export const projects = [
         color: "text-pink-300",
       },
     ],
-    images: [slr01, slr02, slr03, slr04, slr05, slr06, slr07],
+    image: sl_railways,
     source_code_link: "https://github.com/",
   },
 ];

@@ -3,7 +3,6 @@ import { styles } from "../../styles";
 import { technologies } from "../../data";
 import { BallCanvas } from "../../assets";
 import useMediaQuary from "../../hooks/useMediaQuary";
-import { h01 } from "../../assets/images/house_of_fashion";
 
 const About = ({ darkTheme }) => {
   const isAboveMediumScreens = useMediaQuary("(min-width:768px");

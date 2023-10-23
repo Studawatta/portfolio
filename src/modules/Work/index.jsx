@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { github } from "../../assets";
 import { projects } from "../../data";
 import { useState } from "react";
-import { ImageSlider } from "../../components";
+import { RiExternalLinkFill } from "react-icons/ri";
 
 const ProjectCard = ({
   index,
@@ -16,6 +16,7 @@ const ProjectCard = ({
   viewImg,
   setIndex,
   darkTheme,
+  link,
 }) => {
   return (
     <motion.div
@@ -46,10 +47,20 @@ const ProjectCard = ({
               setIndex(index);
             }}
           />
-          <div className="m-3 flex h-fit justify-end ">
+          <div className="mt-2 flex h-fit justify-between ">
+            <div className="flex items-center gap-3">
+              <h3 className="flex items-center gap-3 text-[24px] font-bold dark:text-white">
+                {name}
+              </h3>
+              <RiExternalLinkFill
+                onClick={() => window.open(link, "_blank")}
+                className=" cursor-pointer text-2xl text-slate-300 hover:text-green-600"
+              />
+            </div>
+
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-black"
+              className="black-gradient  flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-black"
             >
               <img
                 src={github}
@@ -59,8 +70,7 @@ const ProjectCard = ({
             </div>
           </div>
         </div>
-        <div className="mt-5">
-          <h3 className="text-[24px] font-bold dark:text-white">{name}</h3>
+        <div className="mt-16">
           <p className="mt-2 text-[14px] dark:text-secondary">{description}</p>
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
@@ -112,26 +122,18 @@ const Work = ({ darkTheme }) => {
           and manage projects effectively.
         </motion.p>
       </div>
-      {viewImg ? (
-        <ImageSlider
-          viewImage={setViewImg}
-          // imges={projects[0].name}
-          index={proIndex}
-        />
-      ) : (
-        <div className="mt-20 flex flex-wrap gap-7">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={`project-${index}`}
-              index={index}
-              image={project.images[0]}
-              {...project}
-              viewImg={setViewImg}
-              setIndex={setProIndex}
-            />
-          ))}
-        </div>
-      )}
+      <div className="mt-20 flex flex-wrap gap-7">
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={`project-${index}`}
+            index={index}
+            // image={project.images[0]}
+            {...project}
+            viewImg={setViewImg}
+            setIndex={setProIndex}
+          />
+        ))}
+      </div>
     </div>
   );
 };

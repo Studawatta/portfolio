@@ -9,14 +9,15 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
-  docker,
-  threejs,
+  jest,
   mysql,
   evogym,
-  house_of_fashion,
+  scholart,
   pizzahut,
   sl_railways,
+  propspace,
+  daraz,
+  click,
 } from "../assets";
 
 export const navLinks = [
@@ -64,6 +65,10 @@ export const technologies = [
     icon: tailwind,
   },
   {
+    name: "Jest",
+    icon: jest,
+  },
+  {
     name: "Node JS",
     icon: nodejs,
   },
@@ -84,9 +89,9 @@ export const technologies = [
 
 export const projects = [
   {
-    name: "House Of Fashion",
+    name: "Scholart",
     description:
-      "Ecommerce web application front-end that allows users to find their needs from one place.Buyers can see a catalog of products,filter them and add to the cart.",
+      "Student management system that allows users to keep recordings of students and teachers.",
     tags: [
       {
         name: "javaScript",
@@ -104,16 +109,32 @@ export const projects = [
 
       {
         name: "redux-toolkit",
-        color: "text-yellow-300",
+        color: "text-yellow-200",
       },
       {
-        name: "material_tailwind",
+        name: "react-query",
         color: "text-purple-300",
       },
+      {
+        name: "node",
+        color: "text-green-300",
+      },
+      {
+        name: "express",
+        color: "text-red-300",
+      },
+      {
+        name: "mysql",
+        color: "text-blue-500",
+      },
+      {
+        name: "firebase",
+        color: "text-yellow-500",
+      },
     ],
-    image: house_of_fashion,
-    source_code_link: "https://github.com/Studawatta/House-Of-Wears.git",
-    link: "https://pizza-hut-clone-gamma.vercel.app/",
+    image: scholart,
+    source_code_link: "https://github.com/Studawatta/scholart.git",
+    link: "https://scholart.onrender.com",
   },
 
   {
@@ -143,6 +164,117 @@ export const projects = [
     link: "https://evogym.vercel.app/",
   },
   {
+    name: "PropSpace",
+    description:
+      "Real Estate web application that allows users to post ads and view listings",
+    tags: [
+      {
+        name: "javaScript",
+        color: "text-[#666633]",
+      },
+      {
+        name: "react",
+        color: "text-blue-300",
+      },
+
+      {
+        name: "tailwind",
+        color: "text-pink-300",
+      },
+
+      {
+        name: "redux-toolkit",
+        color: "text-yellow-200",
+      },
+
+      {
+        name: "node",
+        color: "text-green-300",
+      },
+      {
+        name: "express",
+        color: "text-red-300",
+      },
+      {
+        name: "mongoDB",
+        color: "text-blue-500",
+      },
+      {
+        name: "firebase",
+        color: "text-yellow-500",
+      },
+    ],
+    image: propspace,
+    source_code_link: "https://github.com/Studawatta/PropSpace.git",
+    link: "https://propspace.onrender.com",
+  },
+  {
+    name: "Click",
+    description:
+      "Social media application that allows users to add friends, share posts, like, dislike, post comments.",
+    tags: [
+      {
+        name: "javaScript",
+        color: "text-[#666633]",
+      },
+      {
+        name: "react",
+        color: "text-blue-300",
+      },
+
+      {
+        name: "sass",
+        color: "text-pink-300",
+      },
+
+      {
+        name: "react-query",
+        color: "text-purple-300",
+      },
+      {
+        name: "node",
+        color: "text-green-300",
+      },
+      {
+        name: "express",
+        color: "text-red-300",
+      },
+      {
+        name: "mysql",
+        color: "text-blue-500",
+      },
+      {
+        name: "firebase",
+        color: "text-yellow-500",
+      },
+    ],
+    image: click,
+    source_code_link: "https://github.com/Studawatta/click.git",
+    // link: "https://scholart.onrender.com",
+  },
+  {
+    name: "Daraz",
+    description: "Clone of Daraz e commerce web application front-end.",
+    tags: [
+      {
+        name: "javaScript",
+        color: "text-[#666633]",
+      },
+      {
+        name: "react",
+        color: "text-blue-300",
+      },
+
+      {
+        name: "tailwind",
+        color: "text-pink-300",
+      },
+    ],
+    image: daraz,
+    source_code_link: "https://github.com/Studawatta/Daraz-clone.git",
+    link: "https://daraz-clone-rosy.vercel.app/",
+  },
+  {
     name: "Pizza Hut",
     description: "Online pizza delivery application front-end for Pizza Hut",
     tags: [
@@ -169,25 +301,25 @@ export const projects = [
     link: "https://pizza-hut-clone-gamma.vercel.app/",
   },
 
-  {
-    name: "Sri Lanka Railways",
-    description: "Clone of Sri Lanka Railways ticket booking site",
-    tags: [
-      {
-        name: "javaScript",
-        color: "text-[#666633]",
-      },
-      {
-        name: "react",
-        color: "text-blue-300",
-      },
+  // {
+  //   name: "Sri Lanka Railways",
+  //   description: "Clone of Sri Lanka Railways ticket booking site",
+  //   tags: [
+  //     {
+  //       name: "javaScript",
+  //       color: "text-[#666633]",
+  //     },
+  //     {
+  //       name: "react",
+  //       color: "text-blue-300",
+  //     },
 
-      {
-        name: "tailwind",
-        color: "text-pink-300",
-      },
-    ],
-    image: sl_railways,
-    source_code_link: "https://github.com/",
-  },
+  //     {
+  //       name: "tailwind",
+  //       color: "text-pink-300",
+  //     },
+  //   ],
+  //   image: sl_railways,
+  //   source_code_link: "https://github.com/",
+  // },
 ];

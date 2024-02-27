@@ -5,6 +5,10 @@ import logo from "./logo.png";
 import pizzahut from "./pizzahut.png";
 import sl_railways from "./sl_railways.png";
 import whiteLogo from "./whiteLogo.png";
+import scholart from "./scholart.png";
+import propspace from "./propspace.png";
+import daraz from "./daraz.png";
+import click from "./click.png";
 
 export {
   evogym,
@@ -14,4 +18,8 @@ export {
   pizzahut,
   sl_railways,
   whiteLogo,
+  scholart,
+  propspace,
+  daraz,
+  click,
 };

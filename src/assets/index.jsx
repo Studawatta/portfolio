@@ -1,4 +1,6 @@
+/* eslint-disable react-refresh/only-export-components */
 import docker from "./icons/docker.png";
+import jest from "./icons/jest.png";
 import figma from "./icons/figma.png";
 import git from "./icons/git.png";
 import html from "./icons/html.png";
@@ -23,6 +25,10 @@ import {
   pizzahut,
   sl_railways,
   whiteLogo,
+  scholart,
+  propspace,
+  daraz,
+  click,
 } from "./images";
 
 export {
@@ -48,4 +54,9 @@ export {
   pizzahut,
   sl_railways,
   whiteLogo,
+  jest,
+  scholart,
+  propspace,
+  daraz,
+  click,
 };

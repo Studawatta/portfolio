@@ -52,10 +52,12 @@ const ProjectCard = ({
               <h3 className="flex items-center gap-3 text-[24px] font-bold dark:text-white">
                 {name}
               </h3>
-              <RiExternalLinkFill
-                onClick={() => window.open(link, "_blank")}
-                className=" cursor-pointer text-2xl text-slate-300 hover:text-green-600"
-              />
+              {link && (
+                <RiExternalLinkFill
+                  onClick={() => window.open(link, "_blank")}
+                  className=" cursor-pointer text-2xl text-slate-300 hover:text-green-600"
+                />
+              )}
             </div>
 
             <div

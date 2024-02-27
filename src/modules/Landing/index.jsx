@@ -1,4 +1,3 @@
-import React from "react";
 import { styles } from "../../styles";
 import whiteLogo from "../../assets/images/whiteLogo.png";
 import logo from "../../assets/images/logo.png";
@@ -32,8 +31,9 @@ const Landing = ({ darkTheme, setDarkTheme }) => {
               </span> */}
             </p>
           </div>
+          z
         </div>
-        <div className=" -top-28 mx-auto h-[200px] w-[200px] md:relative md:h-[350px] md:w-[350px]">
+        <div className=" -top-28 mx-auto h-44 w-44 md:relative md:h-72 md:w-72">
           {darkTheme ? (
             <img
               src={whiteLogo}

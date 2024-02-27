@@ -139,7 +139,7 @@ export const projects = [
 
   {
     name: "EVOGYM",
-    description: "Web application front-end for gymnasium",
+    description: "Web application front-end for gymnasium ",
     tags: [
       {
         name: "typeScript",

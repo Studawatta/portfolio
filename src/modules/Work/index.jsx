@@ -35,7 +35,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="h-[420px] w-full rounded-2xl bg-gray-500 p-5 dark:bg-tertiary sm:w-[360px]"
+        className="w- h-[420px] w-[calc(100vw-128px)] rounded-2xl bg-gray-500 p-5 dark:bg-tertiary md:w-[360px]"
       >
         <div className="relative my-5 h-[160px] w-full ">
           <img
@@ -124,7 +124,7 @@ const Work = ({ darkTheme }) => {
           and manage projects effectively.
         </motion.p>
       </div>
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-20 flex flex-wrap justify-center gap-7 ">
         {projects.map((project, index) => (
           <ProjectCard
             key={`project-${index}`}
